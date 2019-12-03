@@ -3,7 +3,7 @@
 study("Counters Ratio", overlay=false)
 alertLim = 3.25 // input
 cntr_rad = 1.0
-rad_fctr = 1.0
+rad_fctr = 3.0
 ob_limit = +alertLim
 os_limit = -alertLim
 totalVol = vbuy+vsell
@@ -34,4 +34,4 @@ if (rlv8) cntr_rad=5.0*rad_fctr
        
 plot(ob_limit, color=darken(red,150))
 plot(os_limit, color=darken(green,50))
-plotcircle(cntrs, cntr_rad, color=cntr_col, title="Counters Ratio")
+plotshape(cntrs, "circle", cntr_rad, color=cntr_col, title="Counters Ratio")
